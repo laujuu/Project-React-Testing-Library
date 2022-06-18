@@ -1,11 +1,11 @@
 import React from 'react';
+import userEvent from '@testing-library/user-event';
 import FavoritePokemons from '../pages/FavoritePokemons';
 import App from '../App';
 
 import renderWithRouter from '../renderWithRouter';
-import userEvent from '@testing-library/user-event';
 
-describe('Requisito 01 - Componente <About.js /> ', () => {
+describe('Requisito 03 - Componente <FavoritePokemons.js /> ', () => {
   test('Se exibe "No favorite pokemon found" caso vazio', () => {
     const { getByText } = renderWithRouter(<FavoritePokemons />);
     expect(getByText(/No favorite pokemon found/i)).toBeInTheDocument();
